@@ -13,6 +13,7 @@ outputs:
     description: 'Current state of your image, either fresh or stale'
 runs:
   steps:
+    id: image-check
     run: |
     docker ghcr.io/richlander/lucy:main ${{ inputs.image }} ${{ inputs.base-image }} > result.txt
     cat result.txt

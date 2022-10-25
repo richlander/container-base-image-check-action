@@ -1,0 +1,19 @@
+# action.yml
+name: 'Container base image check'
+description: 'Greet someone and record the time'
+inputs:
+  image:
+    description: 'Fully-qualified registry address to your image'
+    required: true
+  base-image: 
+    description: 'Fully-qualified registry address to base image you rely on'
+    required: true
+outputs:
+  state:
+    description: 'Current state of your image, either fresh or stale'
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/richlander/lucy:main'
+  args:
+    - ${{ inputs.image }}
+    - ${{ inputs.base-image }}

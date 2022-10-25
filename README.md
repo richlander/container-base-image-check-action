@@ -1,0 +1,1 @@
+# Container base image check

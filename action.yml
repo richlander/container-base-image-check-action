@@ -14,6 +14,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/richlander/lucy:main'
+  entrypoint: 'entrypoint.sh'
   args:
     - ${{ inputs.image }}
     - ${{ inputs.base-image }}

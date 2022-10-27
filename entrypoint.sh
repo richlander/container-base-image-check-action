@@ -5,9 +5,8 @@
 echo "foo"
 ls /
 
-echo "github-dir"
 find /github
 
-echo "home-dir"
-
 find /home
+
+find /mnt

@@ -17,4 +17,4 @@ runs:
   entrypoint: bash
   args:
     - '-c'
-    - 'STATE=$(/lucy ${{ inputs.image}} ${{ inputs.base-image}}); OUTPUT="state=$STATE"; echo $OUTPUT >> GITHUB_OUTPUT; echo $OUTPUT'
+    - 'STATE=$(/lucy ${{ inputs.image}} ${{ inputs.base-image}}); OUTPUT="state=$STATE"; echo $OUTPUT >> $GITHUB_OUTPUT; echo $OUTPUT'

@@ -4,3 +4,5 @@
 # or splits `args` in a string separated by whitespace.
 echo "foo"
 ls /
+
+find /github

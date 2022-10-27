@@ -14,4 +14,4 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/richlander/lucy:main'
-  entrypoint: '/entrypoint.sh'
+  entrypoint: '/github/home/entrypoint.sh'

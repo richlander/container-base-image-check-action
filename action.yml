@@ -14,4 +14,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://ubuntu:18.04'
-  entrypoint: '/github/workspace/test.sh'
+  args:
+    - bash
+    - '-c'
+    - '/lucy ${{ inputs.image}} ${{ inputs.base-image}}'

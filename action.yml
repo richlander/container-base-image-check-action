@@ -13,5 +13,5 @@ outputs:
     description: 'Current state of your image, either fresh or stale'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/richlander/lucy:main'
-  entrypoint: 'entrypoint.sh'
+  image: 'docker://ubuntu:18.04'
+  entrypoint: 'test.sh'

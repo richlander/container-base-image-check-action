@@ -14,4 +14,4 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://ubuntu:18.04'
-  entrypoint: 'test.sh'
+  entrypoint: '/github/workflow/test.sh'

@@ -17,4 +17,6 @@ runs:
   args:
     - bash
     - '-c'
-    - '/lucy ${{ inputs.image}} ${{ inputs.base-image}}'
+    - '/lucy'
+    - '${{ inputs.image}}'
+    - '${{ inputs.base-image}}'

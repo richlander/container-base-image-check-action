@@ -17,4 +17,4 @@ runs:
   entrypoint: bash
   args:
     - '-c'
-    - 'STATE=$(./lucy ${{ inputs.image}} ${{ inputs.base-image}} | jq -r .state); OUTPUT="state=$STATE"; echo $OUTPUT >> $GITHUB_OUTPUT'
+    - 'STATE=$(/lucy/lucy ${{ inputs.image}} ${{ inputs.base-image}} | jq -r .state); OUTPUT="state=$STATE"; echo $OUTPUT >> $GITHUB_OUTPUT'

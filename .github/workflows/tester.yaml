@@ -1,0 +1,27 @@
+name: Image freshness check
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  freshness-check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Call image check action
+      id: check
+      uses: ./
+      with:
+        image: ghcr.io/richlander/lucy:main
+        base-image: mcr.microsoft.com/dotnet/runtime:7.0
+    
+    - name: print result
+      run: | 
+        echo "test"
+        echo "${{steps.check.outputs.state}}"
+        echo "test 2"
